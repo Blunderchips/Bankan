@@ -13,11 +13,13 @@ import { environment } from 'src/environments/environment.prod';
 
 import { HomeComponent } from './home/home.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
