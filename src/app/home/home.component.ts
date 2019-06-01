@@ -2,13 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { NestedTreeControl } from '@angular/cdk/tree';
 import { ArrayDataSource } from '@angular/cdk/collections';
 
-interface Node {
-  item: string;
-  isChecked: boolean;
-  children?: Node[];
-}
+import { ListItem } from '../models/list-item';
 
-const TREE_DATA: Node[] = [
+const TREE_DATA: ListItem[] = [
   {
     item: 'Fruit',
     isChecked: true,
@@ -54,7 +50,7 @@ const TREE_DATA: Node[] = [
 })
 export class HomeComponent implements OnInit {
 
-  treeControl = new NestedTreeControl<Node>(node => node.children);
+  treeControl = new NestedTreeControl<ListItem>(node => node.children);
   dataSource = new ArrayDataSource(TREE_DATA);
 
   constructor() { }
@@ -62,7 +58,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  hasChild = (_: number, node: Node) => {
+  hasChild = (_: number, node: ListItem) => {
     return !!node.children && node.children.length > 0;
   }
 }
