@@ -10,41 +10,38 @@
   </mat-expansion-panel-header>
 
   <ng-template matExpansionPanelContent>
+    <mat-divider></mat-divider>
 
-    <mat-selection-list>
-      <cdk-tree [dataSource]="dataSource" [treeControl]="treeControl">
+    <mat-tab-group mat-stretch-tabs dynamicHeight headerPosition="below" mat-align-tabs="center">
 
-        <!-- This is the tree node template for leaf nodes -->
-        <cdk-nested-tree-node *cdkTreeNodeDef="let node" class="example-tree-node">
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon>check</mat-icon>
+        </ng-template>
 
-          <mat-list-option selected="{{ node.isChecked }}">
-            <!-- use a disabled button to provide padding for tree leaf -->
-            <button mat-icon-button disabled></button>
-            <!-- drag_indicator -->
-            {{ node.item }}
+        <mat-selection-list #list>
+          <mat-list-option *ngFor="let i of data" selected="{{ i.isChecked }}" (click)="onClick(i)">
+            {{ i.item }}
           </mat-list-option>
+        </mat-selection-list>
+      </mat-tab>
 
-        </cdk-nested-tree-node>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon>poll</mat-icon>
+        </ng-template>
 
-        <!-- This is the tree node template for expandable nodes -->
-        <cdk-nested-tree-node *cdkTreeNodeDef="let node; when: hasChild" class="example-tree-node">
-          <button mat-icon-button [attr.aria-label]="'toggle ' + node.item" cdkTreeNodeToggle style="float: left">
-            <mat-icon class="mat-icon-rtl-mirror">
-              {{ treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right' }}
-            </mat-icon>
-          </button>
+        Generated Graphs
+      </mat-tab>
 
-          <mat-list-option selected="{{ node.isChecked }}">
-            {{ node.item }}
-          </mat-list-option>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon>settings</mat-icon>
+        </ng-template>
 
-          <div [class.example-tree-invisible]="!treeControl.isExpanded(node)">
-            <ng-container cdkTreeNodeOutlet></ng-container>
-          </div>
-        </cdk-nested-tree-node>
-
-      </cdk-tree>
-    </mat-selection-list>
+        Settings
+      </mat-tab>
+    </mat-tab-group>
 
   </ng-template>
 
