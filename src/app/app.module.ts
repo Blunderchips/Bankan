@@ -14,12 +14,14 @@ import { environment } from 'src/environments/environment.prod';
 import { HomeComponent } from './home/home.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ItemTreeComponent as ListTreeComponent } from './list-tree/list-tree.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ListTreeComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
