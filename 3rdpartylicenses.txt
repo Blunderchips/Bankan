@@ -51,8 +51,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-@angular/cdk/tree
-
 @angular/common
 MIT
 
@@ -102,6 +100,8 @@ THE SOFTWARE.
 
 @angular/material/dialog
 
+@angular/material/divider
+
 @angular/material/expansion
 
 @angular/material/icon
@@ -111,6 +111,8 @@ THE SOFTWARE.
 @angular/material/sidenav
 
 @angular/material/snack-bar
+
+@angular/material/tabs
 
 @angular/material/toolbar
 
