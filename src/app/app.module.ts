@@ -13,7 +13,7 @@ import { environment } from 'src/environments/environment.prod';
 
 import { HomeComponent } from './home/home.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { ItemTreeComponent as ListTreeComponent } from './list-tree/list-tree.component';
+import { ItemTreeComponent } from './list-tree/list-tree.component';
 import { SigninComponent } from './signin/signin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
@@ -21,7 +21,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   declarations: [
     AppComponent,
     HomeComponent,
-    ListTreeComponent,
+    ItemTreeComponent,
     SigninComponent,
     PageNotFoundComponent,
   ],
