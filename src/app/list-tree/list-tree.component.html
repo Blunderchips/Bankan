@@ -1,16 +1,16 @@
 <mat-expansion-panel>
 
   <mat-expansion-panel-header>
-    <mat-panel-title>
-      Personal data
-    </mat-panel-title>
+    <mat-panel-title> {{ list.name }} </mat-panel-title>
     <mat-panel-description>
-      Type your name and age
+      {{ list.description }} - {{ list.uid }}
     </mat-panel-description>
   </mat-expansion-panel-header>
 
   <ng-template matExpansionPanelContent>
+    <ng-content></ng-content>
     <mat-divider></mat-divider>
+    <button (click)="add()">add</button>
 
     <mat-tab-group mat-stretch-tabs dynamicHeight headerPosition="below" mat-align-tabs="center">
 
@@ -20,7 +20,7 @@
         </ng-template>
 
         <mat-selection-list #list>
-          <mat-list-option *ngFor="let i of data" selected="{{ i.isChecked }}" (click)="onClick(i)">
+          <mat-list-option *ngFor="let i of items | async">
             {{ i.item }}
           </mat-list-option>
         </mat-selection-list>

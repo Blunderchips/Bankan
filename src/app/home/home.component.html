@@ -1,22 +1,22 @@
-<mat-accordion>
+<div>
 
-  <app-list-tree></app-list-tree>
+  <!-- <div>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date" disabled>
+      <mat-datepicker touchUi #picker disabled="false"></mat-datepicker>
+    </mat-form-field>
+    <button mat-raised-button (click)="picker.open()">Open</button>
+  </div> -->
 
-  <mat-expansion-panel>
+  <mat-accordion>
 
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Self aware panel
-      </mat-panel-title>
-      <mat-panel-description>
-        Currently I am not working.
-      </mat-panel-description>
-    </mat-expansion-panel-header>
+    <app-list-tree *ngFor="let list of lists | async" [list]=list>
+    </app-list-tree>
 
-    <ng-template matExpansionPanelContent>
-      <p>I'm visible because I am open</p>
-    </ng-template>
+  </mat-accordion>
 
-  </mat-expansion-panel>
-
-</mat-accordion>
+  <br>
+  <button (click)="add()" mat-fab aria-label="Example icon-button with a heart icon">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
