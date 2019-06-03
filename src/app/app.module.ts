@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ItemTreeComponent as ListTreeComponent } from './list-tree/list-tree.component';
 import { SigninComponent } from './signin/signin.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SigninComponent } from './signin/signin.component';
     HomeComponent,
     ListTreeComponent,
     SigninComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
