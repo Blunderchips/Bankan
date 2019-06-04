@@ -1,6 +1,7 @@
 {
   "name": "bankan",
   "version": "0.0.0",
+  "main": "main.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +9,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "gen-docs": "npx compodoc -p src/tsconfig.app.json -d docs"
+    "gen-docs": "npx compodoc -p src/tsconfig.app.json -d docs",
+    "electron": "electron .",
+    "electron-build": "ng build --prod --base-href ./ && electron ."
   },
   "private": true,
   "dependencies": {
@@ -40,6 +43,7 @@
     "@types/jasminewd2": "~2.0.6",
     "@types/node": "~12.0.3",
     "codelyzer": "~5.0.1",
+    "electron": "^5.0.2",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
