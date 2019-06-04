@@ -1,24 +1,12 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
-import { AuthGuard } from './services/auth.guard';
-
-import { HomeComponent } from './home/home.component';
-import { SigninComponent } from './signin/signin.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
-
-const routes: Routes = [
-  { path: '', redirectTo: '/signin', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
-  { path: 'signin', component: SigninComponent },
-  { path: '**', component: PageNotFoundComponent }
-];
+import { ROUTES } from './app.routes';
 
 @NgModule({
   declarations: [],
   imports: [
-    RouterModule.forRoot(routes, { useHash: false })
+    RouterModule.forRoot(ROUTES, { useHash: false })
   ],
   exports: [RouterModule]
 })
