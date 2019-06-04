@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { List } from '../models/List.model';
+import { List } from '../models/list.model';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ListItem, LIST_ITEMS_TABLE } from '../models/list-item.model';
 
