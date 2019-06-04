@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { AngularFirestore } from '@angular/fire/firestore';
-import { List, LIST_TABLE } from '../models/list.model';
+import { List, LIST_TABLE } from '../../models/list.model';
 
 @Component({
   selector: 'app-home',

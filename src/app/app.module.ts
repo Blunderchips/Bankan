@@ -11,11 +11,11 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { environment } from 'src/environments/environment.prod';
 
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ItemTreeComponent } from './list-tree/list-tree.component';
-import { SigninComponent } from './signin/signin.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SigninComponent } from './pages/signin/signin.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
