@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { List, LIST_TABLE } from '../models/list.model';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
@@ -15,7 +14,7 @@ export class n {
 })
 export class ItemTreeComponent implements OnInit {
 
-  @Input() list: List;
+  // @Input() list: List;
 
   items: n[];
 
@@ -42,14 +41,14 @@ export class ItemTreeComponent implements OnInit {
     }
 
     const uid = this.afs.createId();
-    const list = this.list.uid;
+    // const list = this.list.uid;
 
     // this.items.push({
     //   uid,
     //   item
     // });
 
-    this.afs.collection('test').doc(this.list.uid).collection<any>('items').add({ item: _item });
+    // this.afs.collection('test').doc(this.list.uid).collection<any>('items').add({ item: _item });
     // });
   }
 }
