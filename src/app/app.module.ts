@@ -17,6 +17,7 @@ import { ItemTreeComponent } from './list-tree/list-tree.component';
 import { SigninComponent } from './pages/signin/signin.component';
 import { ListComponent } from './elements/list/list.component';
 import { ItemComponent } from './elements/item/item.component';
+import { BookComponent } from './elements/book/book.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ItemComponent } from './elements/item/item.component';
     SigninComponent,
     ListComponent,
     ItemComponent,
+    BookComponent,
   ],
   imports: [
     BrowserModule,
