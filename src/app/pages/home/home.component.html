@@ -1,6 +1,4 @@
-<div>
-
-  <!-- <div>
+<!-- <div>
     <mat-form-field>
       <input matInput [matDatepicker]="picker" placeholder="Choose a date" disabled>
       <mat-datepicker touchUi #picker disabled="false"></mat-datepicker>
@@ -8,17 +6,8 @@
     <button mat-raised-button (click)="picker.open()">Open</button>
   </div> -->
 
-  <mat-accordion [multi]=true>
+<!-- <app-book></app-book> -->
 
-    <!-- <app-list-tree *ngFor="let list of lists | async" [list]=list>
-    </app-list-tree> -->
-
-    <app-list *ngFor="let list of lists | async" [list]=list></app-list>
-
-  </mat-accordion>
-
-  <br>
-  <button (click)="add()" mat-fab aria-label="Example icon-button with a heart icon">
-    <mat-icon>add</mat-icon>
-  </button>
+<div *ngFor="let book of books | async">
+  <app-book [book]=book></app-book>
 </div>

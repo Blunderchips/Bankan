@@ -1,3 +1,13 @@
-<p>
-  book works!
-</p>
+<mat-accordion [multi]=true>
+
+  <!-- <app-list-tree *ngFor="let list of lists | async" [list]=list>
+    </app-list-tree> -->
+
+  <app-list *ngFor="let list of lists | async" [list]=list></app-list>
+
+</mat-accordion>
+
+<br>
+<button (click)="add()" mat-fab aria-label="Example icon-button with a heart icon">
+  <mat-icon>add</mat-icon>
+</button>
