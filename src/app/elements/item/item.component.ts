@@ -11,7 +11,11 @@ export class ItemComponent implements OnInit {
 
   @Input() item: Item;
 
-  constructor(private afs: AngularFirestore) { }
+  private isChecked: boolean;
+
+  constructor(private afs: AngularFirestore) {
+    this.isChecked = false;
+  }
 
   ngOnInit() {
   }
@@ -21,5 +25,6 @@ export class ItemComponent implements OnInit {
    */
   onClick(): void {
     console.log(this.item);
+    this.isChecked = !this.isChecked;
   }
 }
