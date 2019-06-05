@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { AngularFirestore } from '@angular/fire/firestore';
-import { List, LIST_TABLE } from '../../models/list.model';
+import { List, FB_LIST_REF } from 'src/app/elements/list/list.model';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   constructor(private afs: AngularFirestore) { }
 
   ngOnInit() {
-    this.lists = this.afs.collection(LIST_TABLE).valueChanges();
+    this.lists = this.afs.collection(FB_LIST_REF).valueChanges();
 
     // this.auth.user$.subscribe(user => {
     //   this.userUid = user.uid;
@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
    */
   createList(name: string, description: string): void {
     const uid = this.afs.createId();
-    this.afs.collection<List>(LIST_TABLE).doc(uid).set(
+    this.afs.collection<List>(FB_LIST_REF).doc(uid).set(
       {
         uid,
         name,

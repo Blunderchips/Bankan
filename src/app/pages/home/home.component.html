@@ -10,8 +10,10 @@
 
   <mat-accordion>
 
-    <app-list-tree *ngFor="let list of lists | async" [list]=list>
-    </app-list-tree>
+    <!-- <app-list-tree *ngFor="let list of lists | async" [list]=list>
+    </app-list-tree> -->
+
+    <app-list *ngFor="let list of lists | async" [list]=list></app-list>
 
   </mat-accordion>
 

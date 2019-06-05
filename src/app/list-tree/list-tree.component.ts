@@ -1,7 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { List } from '../models/list.model';
+import { List, LIST_TABLE } from '../models/list.model';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { ListItem, LIST_ITEMS_TABLE } from '../models/list-item.model';
+import { Observable } from 'rxjs';
+
+export class n {
+  uid: string;
+  item: string;
+}
 
 @Component({
   selector: 'app-list-tree',
@@ -12,30 +17,39 @@ export class ItemTreeComponent implements OnInit {
 
   @Input() list: List;
 
-  items: any;
+  items: n[];
 
   constructor(private afs: AngularFirestore) { }
 
   ngOnInit() {
-    this.items = this.afs.collection(LIST_ITEMS_TABLE,
-      ref => ref.where('list', '==', this.list.uid)).valueChanges();
+    // this.items = this.afs.doc('list_items/' + this.list.uid).valueChanges().forEach(item => {
+    //   console.log(item);
+    // });
+    // console.log(this.items);
+    // this.items = this.afs.doc<n[]>('list_items/' + this.list.uid).valueChanges();
+    // this.items.subscribe(items => {
+    //   items.forEach(i => {
+    //     console.log(i);
+    //   });
+    // });
   }
 
   add() {
-    const item = window.prompt('enter name');
-    if (!item) {
+    // this.items.subscribe(items => {
+    const _item = window.prompt('enter name');
+    if (!_item) {
       return;
     }
 
     const uid = this.afs.createId();
     const list = this.list.uid;
 
-    this.afs.collection<ListItem>(LIST_ITEMS_TABLE).doc(uid).set(
-      {
-        uid,
-        list,
-        item
-      }
-    );
+    // this.items.push({
+    //   uid,
+    //   item
+    // });
+
+    this.afs.collection('test').doc(this.list.uid).collection<any>('items').add({ item: _item });
+    // });
   }
 }
