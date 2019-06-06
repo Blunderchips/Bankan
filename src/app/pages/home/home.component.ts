@@ -11,7 +11,7 @@ import { Book } from 'src/app/elements/book/book.model';
 })
 export class HomeComponent implements OnInit {
 
-  private books: Observable<Book[]>;
+  public books: Observable<Book[]>; // Matt(2019/06/06):Needs to be public
 
   constructor(private afs: AngularFirestore) { }
 

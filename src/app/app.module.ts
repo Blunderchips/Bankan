@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LayoutModule } from '@angular/cdk/layout';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -12,8 +13,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { environment } from 'src/environments/environment.prod';
 
 import { HomeComponent } from './pages/home/home.component';
-import { LayoutModule } from '@angular/cdk/layout';
-import { ItemTreeComponent } from './list-tree/list-tree.component';
 import { SigninComponent } from './pages/signin/signin.component';
 import { ListComponent } from './elements/list/list.component';
 import { ItemComponent } from './elements/item/item.component';
@@ -23,7 +22,6 @@ import { BookComponent } from './elements/book/book.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    ItemTreeComponent,
     SigninComponent,
     ListComponent,
     ItemComponent,

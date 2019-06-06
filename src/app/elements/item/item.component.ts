@@ -17,7 +17,7 @@ export class ItemComponent implements OnInit {
   /**
    * Current state of the item.
    */
-  private isChecked: boolean;
+  public isChecked: boolean; // Matt(2019/06/06):Needs to be public
 
   constructor(
     private afs: AngularFirestore,
