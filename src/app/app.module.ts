@@ -17,6 +17,8 @@ import { SigninComponent } from './pages/signin/signin.component';
 import { ListComponent } from './elements/list/list.component';
 import { ItemComponent } from './elements/item/item.component';
 import { BookComponent } from './elements/book/book.component';
+import { NavComponent } from './nav/nav.component';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { BookComponent } from './elements/book/book.component';
     ListComponent,
     ItemComponent,
     BookComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,7 @@ import { BookComponent } from './elements/book/book.component';
     LayoutModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // firestore
-    AngularFireAuthModule, // auth
+    AngularFireAuthModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, // auth
   ],
   providers: [],
   bootstrap: [AppComponent]
