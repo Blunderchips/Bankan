@@ -18,7 +18,6 @@ import { ListComponent } from './elements/list/list.component';
 import { ItemComponent } from './elements/item/item.component';
 import { BookComponent } from './elements/book/book.component';
 import { NavComponent } from './nav/nav.component';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -38,7 +37,7 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
     LayoutModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // firestore
-    AngularFireAuthModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, // auth
+    AngularFireAuthModule, // auth
   ],
   providers: [],
   bootstrap: [AppComponent]
