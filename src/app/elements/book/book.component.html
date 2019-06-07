@@ -1,13 +1,27 @@
-<mat-accordion [multi]=true>
+<mat-card>
+  <mat-card-header>
+    <!-- <div mat-card-avatar class="example-header-image"></div> -->
+    <mat-card-title>
+      {{ book.name }}
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{ book.description }}
+    </mat-card-subtitle>
+  </mat-card-header>
 
-  <!-- <app-list-tree *ngFor="let list of lists | async" [list]=list>
-    </app-list-tree> -->
+  <mat-card-content>
 
-  <app-list *ngFor="let list of lists | async" [list]=list></app-list>
+    <mat-accordion [multi]=true>
 
-</mat-accordion>
+      <app-list *ngFor="let list of lists | async" [list]=list></app-list>
 
-<br>
-<button (click)="add()" mat-fab aria-label="Example icon-button with a heart icon">
-  <mat-icon>add</mat-icon>
-</button>
+    </mat-accordion>
+
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button (click)="add()" mat-fab aria-label="Example icon-button with a heart icon">
+      <mat-icon>add</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>
