@@ -2,7 +2,11 @@
 
     <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
         [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
-        <mat-toolbar>Menu</mat-toolbar>
+
+        <mat-toolbar-row>
+            <span>Menu</span>
+        </mat-toolbar-row>
+
         <mat-nav-list>
             <a mat-list-item routerLink="/home">Home</a>
             <a mat-list-item routerLink="/signin">Sign in</a>
@@ -33,6 +37,11 @@
                 <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
             </button>
             <span>{{ title }}</span>
+
+            <span class="settings-spacer"></span>
+            <button type="button" aria-label="Toggle settings tab" mat-icon-button>
+                <mat-icon aria-hidden="false" aria-label="Open Settings icon">settings</mat-icon>
+            </button>
         </mat-toolbar>
 
         <!-- Add Content Here -->
