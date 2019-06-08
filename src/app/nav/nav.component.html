@@ -3,9 +3,13 @@
     <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
         [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
 
-        <mat-toolbar-row>
+        <ngx-avatar name="{{ name }}" gravatarId="{{ email }}" src="{{ photo }}" size="100" [round]="false">
+        </ngx-avatar>
+        <mat-divider></mat-divider>
+
+        <!-- <mat-toolbar-row>
             <span>Menu</span>
-        </mat-toolbar-row>
+        </mat-toolbar-row> -->
 
         <mat-nav-list>
             <a mat-list-item routerLink="/home">Home</a>

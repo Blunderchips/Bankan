@@ -18,6 +18,12 @@ import { WhiteList } from '../models/white-list.model';
 })
 export class NavComponent implements OnInit {
 
+  // For ngx-avatar
+  name = '';
+  email = '';
+  photo = '';
+  // --
+
   /**
    * App title to be displayed on the menu bar.
    */
@@ -46,6 +52,12 @@ export class NavComponent implements OnInit {
 
   ngOnInit(): void {
     this.books = this.afs.collection<Book>('books').valueChanges();
+
+    // For ngx-avatar
+    this.auth.user.subscribe(user => this.name = user.displayName);
+    this.auth.user.subscribe(user => this.email = user.email);
+    this.auth.user.subscribe(user => this.photo = user.photoURL);
+    // --
   }
 
   addBook(): void {
