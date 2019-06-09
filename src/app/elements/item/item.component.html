@@ -1,0 +1,14 @@
+<mat-list-item (click)="onClick()">
+
+  <div *ngIf="isChecked; then checked else unchecked"></div>
+
+  <!-- Strike through checked items -->
+  <ng-template #checked>
+    <s>{{ item.item }}</s>
+  </ng-template>
+
+  <ng-template #unchecked>
+    {{ item.item }}
+  </ng-template>
+</mat-list-item>
+<mat-divider></mat-divider>

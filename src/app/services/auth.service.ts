@@ -11,12 +11,14 @@ import {
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
+import { User } from '../models/user.model';
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  user$: Observable<any>;
+  user$: Observable<User>;
 
   constructor(
     private afAuth: AngularFireAuth,
@@ -26,7 +28,7 @@ export class AuthService {
     this.user$ = this.afAuth.authState.pipe(
       switchMap(user => {
         if (user) {
-          return this.afs.doc<any>(`users/${user.uid}`).valueChanges();
+          return this.afs.doc<User>(`users/${user.uid}`).valueChanges();
         } else {
           return of(null);
         }
@@ -46,9 +48,9 @@ export class AuthService {
     return this.router.navigate(['/']);
   }
 
-  private updateUserData(user) {
+  private updateUserData(user: User) {
     // Sets user data to firestore on login
-    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
+    const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${user.uid}`);
 
     const data = {
       uid: user.uid,
