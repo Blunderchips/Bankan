@@ -9,8 +9,10 @@ branches:
 addons:
   chrome: stable
 
+before_install: npx @angular/cli analytics off
+
 before_script:
-  - yarn global add @angular/cli analytics off
+  - yarn global add @angular/cli
 
 cache:
   yarn: true
