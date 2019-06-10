@@ -62,7 +62,12 @@ export class NavComponent implements OnInit {
 
   addBook(): void {
     this.auth.user.subscribe(user => {
-      const name = window.prompt('name of list');
+      const name = window.prompt('name of list').trim();
+      if (!name) {
+        console.error('Invalid book name.');
+        return;
+      }
+
       const uid = this.afs.createId();
 
       this.afs.collection('white_list').doc<WhiteList>(`${uid} ${user.uid}`).set({
