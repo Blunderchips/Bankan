@@ -10,7 +10,7 @@ addons:
   chrome: stable
 
 before_script:
-  - yarn global add @angular/cli
+  - yarn global add @angular/cli analytics off
 
 cache:
   yarn: true
