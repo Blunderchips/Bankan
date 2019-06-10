@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http'; // needed by Avatar Mod
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -41,6 +42,7 @@ import { NavComponent } from './nav/nav.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // firestore
     AngularFireAuthModule, // auth
+    NgxAuthFirebaseUIModule.forRoot(environment.firebase),
     HttpClientModule,
     AvatarModule,
   ],
