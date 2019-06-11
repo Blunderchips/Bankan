@@ -2,29 +2,33 @@
 
 When was the last time you saw a good to-do app? A semester break project with the goal of learning Angular, deploying a truly cross-platform application and making an actually good checklist application.
 
-[![Build Status](https://travis-ci.org/Blunderchips/bankan.svg?branch=master)](https://travis-ci.org/Blunderchips/bankan)
-&nbsp;
-[![Creative Commons License](https://i.creativecommons.org/l/by-nc/4.0/80x15.png)](http://creativecommons.org/licenses/by-nc/4.0/)
+![version](https://img.shields.io/github/package-json/v/Blunderchips/bankan.svg)&nbsp;
+[![Build Status](https://travis-ci.org/Blunderchips/bankan.svg?branch=master)](https://travis-ci.org/Blunderchips/bankan)&nbsp;
+[![codecov](https://codecov.io/gh/Blunderchips/bankan/branch/master/graph/badge.svg)](https://codecov.io/gh/Blunderchips/bankan)&nbsp;
+![repo-size](https://img.shields.io/github/repo-size/Blunderchips/bankan.svg)&nbsp;
+
+[![Creative Commons License](https://i.creativecommons.org/l/by-nc/4.0/80x15.png)](http://creativecommons.org/licenses/by-nc/4.0/)&nbsp;
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installing](#installing)
-- [Built with Angular](#built-with-angular)
-  - [Development server](#development-server)
-  - [Code scaffolding](#code-scaffolding)
-  - [Build](#build)
-  - [Running unit tests](#running-unit-tests)
-  - [Running end-to-end tests](#running-end-to-end-tests)
-  - [Further help](#further-help)
-- [Contributing](#contributing)
-  - [Report an Issue](#report-an-issue)
-- [Authors](#authors)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+- [Bankan](#bankan)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installing](#installing)
+  - [Built with Angular](#built-with-angular)
+    - [Development server](#development-server)
+    - [Code scaffolding](#code-scaffolding)
+    - [Build](#build)
+    - [Running unit tests](#running-unit-tests)
+    - [Running end-to-end tests](#running-end-to-end-tests)
+    - [Further help](#further-help)
+  - [Contributing](#contributing)
+    - [Report an Issue](#report-an-issue)
+  - [Authors](#authors)
+  - [License](#license)
+  - [Acknowledgements](#acknowledgements)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
