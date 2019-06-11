@@ -1,6 +1,8 @@
 # Bankan
 A semester break project with the goal of learning Angular, deploying a truly cross-platform application and making an actually good checklist application.
 
+<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" />
+
 ## Angular 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
