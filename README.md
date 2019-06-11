@@ -10,22 +10,21 @@ When was the last time you saw a good to-do app? A semester break project with t
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Bankan](#bankan)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installing](#installing)
-  - [Built with Angular](#built-with-angular)
-    - [Development server](#development-server)
-    - [Code scaffolding](#code-scaffolding)
-    - [Build](#build)
-    - [Running unit tests](#running-unit-tests)
-    - [Running end-to-end tests](#running-end-to-end-tests)
-    - [Further help](#further-help)
-  - [Contributing](#contributing)
-    - [Report an Issue](#report-an-issue)
-  - [Authors](#authors)
-  - [License](#license)
-  - [Acknowledgements](#acknowledgements)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installing](#installing)
+- [Built with Angular](#built-with-angular)
+  - [Development server](#development-server)
+  - [Code scaffolding](#code-scaffolding)
+  - [Build](#build)
+  - [Running unit tests](#running-unit-tests)
+  - [Running end-to-end tests](#running-end-to-end-tests)
+  - [Further help](#further-help)
+- [Contributing](#contributing)
+  - [Report an Issue](#report-an-issue)
+- [Authors](#authors)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
