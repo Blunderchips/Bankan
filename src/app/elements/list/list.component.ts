@@ -23,7 +23,7 @@ export class ListComponent implements OnInit {
   }
 
   addItem(): void {
-    const item = window.prompt('Item');
+    const item = window.prompt('Item').trim();
     if (!item) {
       return;
     }

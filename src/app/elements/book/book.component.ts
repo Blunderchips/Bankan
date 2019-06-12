@@ -38,7 +38,7 @@ export class BookComponent implements OnInit {
   }
 
   add() {
-    const name = window.prompt('enter name');
+    const name = window.prompt('enter name').trim();
     if (!name) {
       return;
     }
