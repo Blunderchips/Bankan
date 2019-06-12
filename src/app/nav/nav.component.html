@@ -3,8 +3,15 @@
     <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
         [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
 
-        <ngx-avatar name="{{ name }}" gravatarId="{{ email }}" src="{{ photo }}" size="100" [round]="false">
-        </ngx-avatar>
+        <div *ngIf="isLoggedIn; then avatar else icon"></div>
+        <ng-template #avatar>
+            <ngx-avatar name="{{ name }}" gravatarId="{{ email }}" src="{{ photo }}" size="100%" [round]="false">
+            </ngx-avatar>
+        </ng-template>
+        <ng-template #icon>
+            <img src="assets/check-mark.svg" alt="{{ title }}">
+        </ng-template>
+
         <mat-divider></mat-divider>
 
         <!-- <mat-toolbar-row>
@@ -45,7 +52,7 @@
             </button>
             <span>{{ title }}</span>
 
-            <span class="settings-spacer"></span>
+            <span class="spacer"></span>
             <button type="button" aria-label="Toggle settings tab" mat-icon-button>
                 <mat-icon aria-hidden="false" aria-label="Open Settings icon">settings</mat-icon>
             </button>

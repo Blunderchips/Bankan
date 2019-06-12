@@ -22,6 +22,7 @@ import { ListComponent } from './elements/list/list.component';
 import { ItemComponent } from './elements/item/item.component';
 import { BookComponent } from './elements/book/book.component';
 import { NavComponent } from './nav/nav.component';
+import { BookMenuComponent } from './elements/book/book-menu/book-menu.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { NavComponent } from './nav/nav.component';
     ItemComponent,
     BookComponent,
     NavComponent,
+    BookMenuComponent,
   ],
   imports: [
     BrowserModule,
