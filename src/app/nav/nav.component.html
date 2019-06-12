@@ -18,10 +18,12 @@
 
             <mat-divider></mat-divider>
 
-            <a mat-list-item *ngFor="let book of books | async" (click)="showBook(book)"
-                [style.background-color]="isSelected(book) ? 'rgba(50, 115, 220, 0.3)' : 'inherit'">
-                {{ book.name }}
-            </a>
+            <div *ngIf="isLoggedIn">
+                <a mat-list-item *ngFor="let book of books | async" (click)="showBook(book)"
+                    [style.background-color]="isSelected(book) ? 'rgba(50, 115, 220, 0.3)' : 'inherit'">
+                    {{ book.name }}
+                </a>
+            </div>
 
             <mat-divider></mat-divider>
             <!-- <a mat-list-item>List 1</a>

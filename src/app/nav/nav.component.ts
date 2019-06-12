@@ -25,6 +25,11 @@ export class NavComponent implements OnInit {
   // --
 
   /**
+   * Whether a user is logged in or not.
+   */
+  isLoggedIn: boolean;
+
+  /**
    * App title to be displayed on the menu bar.
    */
   @Input() title: string;
@@ -48,16 +53,25 @@ export class NavComponent implements OnInit {
     private afs: AngularFirestore,
     private auth: AngularFireAuth,
     private data: DataService
-  ) { }
+  ) {
+    this.isLoggedIn = false;
+  }
 
   ngOnInit(): void {
     this.books = this.afs.collection<Book>('books').valueChanges();
 
     // For ngx-avatar
-    this.auth.user.subscribe(user => this.name = user.displayName);
-    this.auth.user.subscribe(user => this.email = user.email);
-    this.auth.user.subscribe(user => this.photo = user.photoURL);
-    // --
+    this.auth.user.subscribe(user => {
+      if (!user) {
+        this.isLoggedIn = false;
+        return;
+      } else {
+        this.isLoggedIn = true;
+      }
+      this.name = user.displayName;
+      this.email = user.email;
+      this.photo = user.photoURL;
+    });
   }
 
   addBook(): void {
