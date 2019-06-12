@@ -8,10 +8,10 @@ import { Book } from '../elements/book/book.model';
 })
 export class DataService {
 
-  private selectedBooksSource = new BehaviorSubject<Book[]>([
+  private selectedBooksSource = new BehaviorSubject<string[]>([
     // Matt(08/06/2019): Default to empty array.
   ]);
-  selectedBooks: Observable<Book[]> = this.selectedBooksSource.asObservable();
+  selectedBooks: Observable<string[]> = this.selectedBooksSource.asObservable();
 
   constructor() { }
 }

@@ -19,9 +19,9 @@
             <mat-divider></mat-divider>
 
             <div *ngIf="isLoggedIn">
-                <a mat-list-item *ngFor="let book of books | async" (click)="showBook(book)"
-                    [style.background-color]="isSelected(book) ? 'rgba(50, 115, 220, 0.3)' : 'inherit'">
-                    {{ book.name }}
+                <a mat-list-item *ngFor="let book of whiteList | async" (click)="showBook(book.book)"
+                    [style.background-color]="isSelected(book.book) ? 'rgba(50, 115, 220, 0.3)' : 'inherit'">
+                    {{ getBookName(book.book) }}
                 </a>
             </div>
 
