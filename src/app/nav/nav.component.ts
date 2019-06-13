@@ -8,8 +8,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
 
 import { DataService } from '../services/data.service';
 
-import { Book } from '../elements/book/book.model';
 import { WhiteList } from '../models/white-list.model';
+import { Book } from '../book/book/book.model';
 
 @Component({
     selector: 'app-nav',

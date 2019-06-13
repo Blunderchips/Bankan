@@ -18,22 +18,15 @@ import { AvatarModule } from 'ngx-avatar';
 
 import { HomeComponent } from './pages/home/home.component';
 import { SigninComponent } from './pages/signin/signin.component';
-import { ListComponent } from './elements/list/list.component';
-import { ItemComponent } from './elements/item/item.component';
-import { BookComponent } from './elements/book/book.component';
 import { NavComponent } from './nav/nav.component';
-import { BookMenuComponent } from './elements/book/book-menu/book-menu.component';
+import { BookModule } from './book/book.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SigninComponent,
-    ListComponent,
-    ItemComponent,
-    BookComponent,
     NavComponent,
-    BookMenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +40,7 @@ import { BookMenuComponent } from './elements/book/book-menu/book-menu.component
     NgxAuthFirebaseUIModule.forRoot(environment.firebase),
     HttpClientModule,
     AvatarModule,
+    BookModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

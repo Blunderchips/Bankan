@@ -4,8 +4,6 @@ import { Observable } from 'rxjs';
 
 import { DataService } from 'src/app/services/data.service';
 
-import { Book } from 'src/app/elements/book/book.model';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
