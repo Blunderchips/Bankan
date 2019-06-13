@@ -6,6 +6,7 @@ When was the last time you saw a good to-do app? A semester break project with t
 [![Build Status](https://travis-ci.org/Blunderchips/bankan.svg?branch=master)](https://travis-ci.org/Blunderchips/bankan)&nbsp;
 ![repo-size](https://img.shields.io/github/repo-size/Blunderchips/bankan.svg)&nbsp;
 <!-- [![codecov](https://codecov.io/gh/Blunderchips/bankan/branch/master/graph/badge.svg)](https://codecov.io/gh/Blunderchips/bankan)&nbsp; -->
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)&nbsp;
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-nc/4.0/80x15.png)](http://creativecommons.org/licenses/by-nc/4.0/)&nbsp;
 
@@ -13,22 +14,21 @@ When was the last time you saw a good to-do app? A semester break project with t
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Bankan](#bankan)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installing](#installing)
-  - [Built with Angular](#built-with-angular)
-    - [Development server](#development-server)
-    - [Code scaffolding](#code-scaffolding)
-    - [Build](#build)
-    - [Running unit tests](#running-unit-tests)
-    - [Running end-to-end tests](#running-end-to-end-tests)
-    - [Further help](#further-help)
-  - [Contributing](#contributing)
-    - [Report an Issue](#report-an-issue)
-  - [Authors](#authors)
-  - [License](#license)
-  - [Acknowledgements](#acknowledgements)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installing](#installing)
+- [Built with Angular](#built-with-angular)
+  - [Development server](#development-server)
+  - [Code scaffolding](#code-scaffolding)
+  - [Build](#build)
+  - [Running unit tests](#running-unit-tests)
+  - [Running end-to-end tests](#running-end-to-end-tests)
+  - [Further help](#further-help)
+- [Contributing](#contributing)
+  - [Report an Issue](#report-an-issue)
+- [Authors](#authors)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -111,13 +111,18 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ## Contributing
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-See [Contributing](https://github.com/Blunderchips/bankan/blob/master/CONTRIBUTING.md) for more details and to view our Code of Conduct.
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](https://github.com/Blunderchips/bankan/blob/master/CODE_OF_CONDUCT.md)
 
 ### Report an Issue
 
 - **[Report New Issue](https://github.com/Blunderchips/bankan/issues/new)**
 - **[View Open Issues](https://github.com/Blunderchips/bankan/issues)**
+
+See [Contributing](https://github.com/Blunderchips/bankan/blob/master/CONTRIBUTING.md) for more details and view our [Code of Conduct](https://github.com/Blunderchips/bankan/blob/master/CODE_OF_CONDUCT.md).
+
+TODO: TABLE OF FACES
 
 **Everyone who's created or contributed to issues and pull requests have made the project better!**
 
