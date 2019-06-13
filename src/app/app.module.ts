@@ -10,16 +10,16 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 
-import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
 import { environment } from 'src/environments/environment.prod';
 
 import { AvatarModule } from 'ngx-avatar';
-
-import { HomeComponent } from './pages/home/home.component';
-import { SigninComponent } from './pages/signin/signin.component';
-import { NavComponent } from './nav/nav.component';
+import { AppRoutingModule } from './routing/app-routing.module';
 import { BookModule } from './book/book.module';
+
+import { AppComponent } from './app.component';
+import { NavComponent } from './nav/nav.component';
+import { HomeComponent } from './routing/home/home.component';
+import { SigninComponent } from './routing/signin/signin.component';
 
 @NgModule({
   declarations: [
