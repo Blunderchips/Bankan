@@ -9,7 +9,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { DataService } from '../services/data.service';
 
 import { WhiteList } from '../models/white-list.model';
-import { Book } from '../book/book/book.model';
+import { Book } from '../book/models/book.model';
 
 @Component({
     selector: 'app-nav',

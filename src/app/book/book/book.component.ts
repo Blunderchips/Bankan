@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-
-import { Book } from './book.model';
-import { List } from '../list/list.model';
 import { Observable } from 'rxjs';
+
+import { Book } from '../models/book.model';
+import { List } from '../models/list.model';
 
 @Component({
   selector: 'app-book',
