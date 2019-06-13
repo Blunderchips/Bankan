@@ -6,6 +6,7 @@ When was the last time you saw a good to-do app? A semester break project with t
 [![Build Status](https://travis-ci.org/Blunderchips/bankan.svg?branch=master)](https://travis-ci.org/Blunderchips/bankan)&nbsp;
 ![repo-size](https://img.shields.io/github/repo-size/Blunderchips/bankan.svg)&nbsp;
 <!-- [![codecov](https://codecov.io/gh/Blunderchips/bankan/branch/master/graph/badge.svg)](https://codecov.io/gh/Blunderchips/bankan)&nbsp; -->
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)&nbsp;
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-nc/4.0/80x15.png)](http://creativecommons.org/licenses/by-nc/4.0/)&nbsp;
 
