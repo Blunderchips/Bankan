@@ -2,8 +2,8 @@ import { Routes } from '@angular/router';
 
 import { UserComponent, LoggedInGuard } from 'ngx-auth-firebaseui';
 
-import { HomeComponent } from './pages/home/home.component';
-import { SigninComponent } from './pages/signin/signin.component';
+import { HomeComponent } from './home/home.component';
+import { SigninComponent } from './signin/signin.component';
 
 export const ROUTES: Routes = [
     { path: '', redirectTo: '/signin', pathMatch: 'full' },

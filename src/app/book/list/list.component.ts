@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-
-import { List } from './list.model';
-import { Item } from '../item/item.model';
 import { Observable } from 'rxjs';
+
+import { List } from '../models/list.model';
+import { Item } from '../models/item.model';
 
 @Component({
   selector: 'app-list',
@@ -23,7 +23,7 @@ export class ListComponent implements OnInit {
   }
 
   addItem(): void {
-    const item = window.prompt('Item');
+    const item = window.prompt('Item').trim();
     if (!item) {
       return;
     }

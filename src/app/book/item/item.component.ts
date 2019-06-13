@@ -2,8 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
 
-import { Item } from './item.model';
-import { Check } from 'src/app/models/check.model';
+import { Item } from '../models/item.model';
+import { Check } from '../models/check.model';
 
 @Component({
   selector: 'app-item',

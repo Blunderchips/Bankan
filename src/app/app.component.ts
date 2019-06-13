@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +10,7 @@ export class AppComponent {
   /**
    * Main App Title.
    */
-  title = 'Bankan';
+  title = 'Bankan - The Atomic Checklist!';
 
   constructor() { }
 }
