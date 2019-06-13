@@ -10,7 +10,7 @@ export class AppComponent {
   /**
    * Main App Title.
    */
-  title = 'Bankan - The Atomic Checklist!';
+  title = 'Bankan';
 
   constructor() { }
 }
