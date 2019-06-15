@@ -7,6 +7,7 @@ import { ItemComponent } from './item/item.component';
 import { BookComponent } from './book/book.component';
 import { ListComponent } from './list/list.component';
 import { BookMenuComponent } from './book-menu/book-menu.component';
+import { CheckLogComponent } from './check-log/check-log.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { BookMenuComponent } from './book-menu/book-menu.component';
     ItemComponent,
     BookComponent,
     BookMenuComponent,
+    CheckLogComponent,
   ],
   imports: [
     CommonModule,

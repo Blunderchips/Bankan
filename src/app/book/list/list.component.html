@@ -12,13 +12,55 @@
 
     <button (click)="addItem()">add</button>
 
-    <mat-list #list>
+    <mat-tab-group mat-align-tabs="center" headerPosition="below" mat-stretch-tabs dynamicHeight>
 
-      <div *ngFor="let i of items | async">
-        <app-item [item]=i></app-item>
-      </div>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon>check</mat-icon>
+        </ng-template>
 
-    </mat-list>
+        <!-- <ng-template matTabContent> -->
+        <mat-list #list>
+
+          <app-item *ngFor="let i of items | async" [item]=i></app-item>
+
+        </mat-list>
+        <!-- </ng-template> -->
+      </mat-tab>
+
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon>timeline</mat-icon>
+        </ng-template>
+
+        <ng-template matTabContent>
+          Graphs
+        </ng-template>
+      </mat-tab>
+
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon>history</mat-icon>
+        </ng-template>
+
+        <ng-template matTabContent>
+
+          <app-check-log [listUid]=getUid()></app-check-log>
+
+        </ng-template>
+      </mat-tab>
+
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon>settings</mat-icon>
+        </ng-template>
+
+        <ng-template matTabContent>
+          Settings
+        </ng-template>
+      </mat-tab>
+
+    </mat-tab-group>
   </ng-template>
 
 </mat-expansion-panel>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
@@ -35,4 +35,12 @@ export class ListComponent implements OnInit {
       uid
     });
   }
+
+  /**
+   * @returns uid of the list.
+   */
+  getUid(): string {
+    return this.list.uid;
+  }
 }
+
