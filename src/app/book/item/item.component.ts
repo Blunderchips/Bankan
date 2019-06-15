@@ -46,6 +46,7 @@ export class ItemComponent implements OnInit {
     this.auth.user.subscribe(user => {
       const uid = this.afs.createId();
       this.afs.collection(this.item.uid).doc<Check>(uid).set({
+        parent: this.item.uid,
         timestamp: new Date(),
         isChecked: check,
         user: user.uid
