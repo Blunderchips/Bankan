@@ -1,28 +1,24 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { MatMenuModule } from '@angular/material/menu';
 
-import { BookMenuComponent } from './book-menu.component';
+import { PageNotFoundComponent } from './page-not-found.component';
 
-describe('BookMenuComponent', () => {
-  let component: BookMenuComponent;
-  let fixture: ComponentFixture<BookMenuComponent>;
+describe('PageNotFoundComponent', () => {
+  let component: PageNotFoundComponent;
+  let fixture: ComponentFixture<PageNotFoundComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       declarations: [
-        BookMenuComponent
-      ],
-      imports: [
-        MatMenuModule
+        PageNotFoundComponent
       ]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BookMenuComponent);
+    fixture = TestBed.createComponent(PageNotFoundComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -20,6 +20,7 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './routing/home/home.component';
 import { SigninComponent } from './routing/signin/signin.component';
+import { PageNotFoundComponent } from './routing/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { SigninComponent } from './routing/signin/signin.component';
     HomeComponent,
     SigninComponent,
     NavComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

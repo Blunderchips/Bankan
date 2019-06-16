@@ -5,7 +5,6 @@ When was the last time you saw a good to-do app? A semester break project with t
 ![version](https://img.shields.io/github/package-json/v/Blunderchips/bankan.svg)&nbsp;
 [![Build Status](https://travis-ci.org/Blunderchips/bankan.svg?branch=master)](https://travis-ci.org/Blunderchips/bankan)&nbsp;
 ![repo-size](https://img.shields.io/github/repo-size/Blunderchips/bankan.svg)&nbsp;
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)&nbsp;
 
 <!-- [![codecov](https://codecov.io/gh/Blunderchips/bankan/branch/master/graph/badge.svg)](https://codecov.io/gh/Blunderchips/bankan)&nbsp; -->
 
@@ -15,21 +14,22 @@ When was the last time you saw a good to-do app? A semester break project with t
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installing](#installing)
-- [Built with Angular](#built-with-angular)
-  - [Development server](#development-server)
-  - [Code scaffolding](#code-scaffolding)
-  - [Build](#build)
-  - [Running unit tests](#running-unit-tests)
-  - [Running end-to-end tests](#running-end-to-end-tests)
-  - [Further help](#further-help)
-- [Contributing](#contributing)
-  - [Report an Issue](#report-an-issue)
-- [Authors](#authors)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+- [Bankan](#bankan)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installing](#installing)
+  - [Built with Angular](#built-with-angular)
+    - [Development server](#development-server)
+    - [Code scaffolding](#code-scaffolding)
+    - [Build](#build)
+    - [Running unit tests](#running-unit-tests)
+    - [Running end-to-end tests](#running-end-to-end-tests)
+    - [Further help](#further-help)
+  - [Contributing](#contributing)
+    - [Report an Issue](#report-an-issue)
+  - [Authors](#authors)
+  - [License](#license)
+  - [Acknowledgements](#acknowledgements)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
