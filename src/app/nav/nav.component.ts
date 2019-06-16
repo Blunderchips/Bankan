@@ -6,8 +6,6 @@ import { map } from 'rxjs/operators';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 
-import { DataService } from '../services/data.service';
-
 import { WhiteList } from '../models/white-list.model';
 import { Book } from '../book/models/book.model';
 
@@ -54,7 +52,6 @@ export class NavComponent implements OnInit {
         private breakpointObserver: BreakpointObserver,
         private afs: AngularFirestore,
         private auth: AngularFireAuth,
-        private data: DataService
     ) {
         this.isLoggedIn = false;
     }
@@ -113,37 +110,6 @@ export class NavComponent implements OnInit {
                 creator: user.uid
             });
         });
-    }
-
-    /**
-     * Invoked when a Book is clicked on.
-     * 
-     * @param book the uid of the slected book
-     */
-    showBook(book: string): void {
-        // console.log(book);
-        this.selected[book] = !this.selected[book];
-
-        if (this.selected[book]) {
-            this.data.selectedBooks.subscribe(books => {
-                books.push(book);
-            });
-        } else {
-            this.data.selectedBooks.subscribe(books => {
-                const index: number = books.indexOf(book);
-                books.splice(index, 1); // removes book from array
-            });
-        }
-    }
-
-    /**
-     * @see selected
-     * 
-     * @param book the uid of the book to be tested
-     * @returns Whether a given Book is selected
-     */
-    isSelected(book: string): boolean {
-        return this.selected[book];
     }
 
     getBookName(book: string) {

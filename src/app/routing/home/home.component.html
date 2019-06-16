@@ -1,13 +1,1 @@
-<!-- <div>
-    <mat-form-field>
-      <input matInput [matDatepicker]="picker" placeholder="Choose a date" disabled>
-      <mat-datepicker touchUi #picker disabled="false"></mat-datepicker>
-    </mat-form-field>
-    <button mat-raised-button (click)="picker.open()">Open</button>
-  </div> -->
-
-<!-- <app-book></app-book> -->
-
-<div *ngFor="let book of books | async">
-  <app-book [uid]=book></app-book>
-</div>
+<router-outlet></router-outlet>
