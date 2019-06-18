@@ -20,7 +20,7 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './routing/home/home.component';
 import { SigninComponent } from './routing/signin/signin.component';
-import { PageNotFoundComponent } from './routing/page-not-found/page-not-found.component';
+import { Error404Component } from './routing/error-404/error-404.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import { PageNotFoundComponent } from './routing/page-not-found/page-not-found.c
     HomeComponent,
     SigninComponent,
     NavComponent,
-    PageNotFoundComponent,
+    Error404Component,
   ],
   imports: [
     BrowserModule,

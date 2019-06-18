@@ -4,8 +4,8 @@ import { UserComponent, LoggedInGuard } from 'ngx-auth-firebaseui';
 
 import { HomeComponent } from './home/home.component';
 import { SigninComponent } from './signin/signin.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BookComponent } from '../book/book/book.component';
+import { Error404Component } from './error-404/error-404.component';
 
 export const ROUTES: Routes = [
     { path: '', redirectTo: '/signin', pathMatch: 'full' },
@@ -17,6 +17,6 @@ export const ROUTES: Routes = [
     },
     { path: 'signin', component: SigninComponent },
     { path: 'user', component: UserComponent, canActivate: [LoggedInGuard] }, // ngx-auth-firebaseui-user
-    { path: '**', component: PageNotFoundComponent },
+    { path: '**', component: Error404Component },
 
 ];
