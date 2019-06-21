@@ -1,6 +1,9 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { ToastrService } from 'ngx-toastr';
+
+import { BK_TOAST_MESSAFE_CONFIG } from 'src/app/Bankan';
 
 import { List } from '../models/list.model';
 import { Item } from '../models/item.model';
@@ -20,7 +23,10 @@ export class ListComponent implements OnInit {
   newListItem: string;
   //
 
-  constructor(private afs: AngularFirestore) {
+  constructor(
+    private afs: AngularFirestore,
+    private toastr: ToastrService
+  ) {
     this.newListItem = '';
   }
 
@@ -42,6 +48,7 @@ export class ListComponent implements OnInit {
     });
 
     this.newListItem = ''; // clear input field once done
+    this.toastr.success('Item added successfully', `${item} was added to the list`, BK_TOAST_MESSAFE_CONFIG);
   }
 
   /**
@@ -51,4 +58,3 @@ export class ListComponent implements OnInit {
     return this.list.uid;
   }
 }
-

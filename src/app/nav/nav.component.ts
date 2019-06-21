@@ -35,10 +35,6 @@ export class NavComponent implements OnInit {
     @Input() title: string;
 
     /**
-     * Whether a given Book should be shown or not.
-     */
-    selected = {};
-    /**
      * Object of books stored in database.
      */
     books = {};
