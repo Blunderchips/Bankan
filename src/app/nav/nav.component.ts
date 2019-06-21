@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -8,6 +8,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
 
 import { WhiteList } from '../models/white-list.model';
 import { Book } from '../book/models/book.model';
+import { Router } from '@angular/router';
+import { MatSidenav } from '@angular/material';
 
 @Component({
     selector: 'app-nav',
@@ -48,10 +50,13 @@ export class NavComponent implements OnInit {
             map(result => result.matches)
         );
 
+    @ViewChild('drawer', { static: true }) public sidenav: MatSidenav;
+
     constructor(
         private breakpointObserver: BreakpointObserver,
         private afs: AngularFirestore,
         private auth: AngularFireAuth,
+        private router: Router,
     ) {
         this.isLoggedIn = false;
     }
@@ -118,5 +123,19 @@ export class NavComponent implements OnInit {
         } else {
             return book;
         }
+    }
+
+    /**
+     * Nagivate to a selected book and close nav bar.
+     * 
+     * @param bookUid book to display
+     */
+    gotoBook(bookUid: string) {
+        this.isHandset$.subscribe(isOpen => {
+            if (isOpen) {
+                this.sidenav.close();
+            }
+            this.router.navigate(['/home', bookUid]);
+        });
     }
 }
