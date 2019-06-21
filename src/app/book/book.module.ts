@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { MaterialModule } from '../material.module';
 
@@ -19,7 +20,8 @@ import { CheckLogComponent } from './check-log/check-log.component';
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   exports: [
     BookComponent,

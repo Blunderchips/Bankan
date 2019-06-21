@@ -4,6 +4,7 @@ import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { HttpClientModule } from '@angular/common/http'; // needed by Avatar Module 
+import { FormsModule } from '@angular/forms';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -43,6 +44,7 @@ import { Error404Component } from './routing/error-404/error-404.component';
     HttpClientModule,
     AvatarModule,
     BookModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

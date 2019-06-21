@@ -16,15 +16,21 @@ export class ListComponent implements OnInit {
 
   private items: Observable<Item[]>;
 
-  constructor(private afs: AngularFirestore) { }
+  //
+  newListItem: string;
+  //
+
+  constructor(private afs: AngularFirestore) {
+    this.newListItem = '';
+  }
 
   ngOnInit() {
     this.items = this.afs.collection<Item>(this.list.uid).valueChanges();
   }
 
-  addItem(): void {
-    const item = window.prompt('Item').trim();
-    if (!item) {
+  addNewItem(): void {
+    const item = this.newListItem.trim();
+    if (!item || item.length === 0) {
       return;
     }
 
@@ -34,6 +40,8 @@ export class ListComponent implements OnInit {
       item,
       uid
     });
+
+    this.newListItem = ''; // clear input field once done
   }
 
   /**

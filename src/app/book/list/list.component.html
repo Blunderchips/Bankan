@@ -10,8 +10,6 @@
   <ng-template matExpansionPanelContent>
     <!-- <mat-divider></mat-divider> -->
 
-    <button (click)="addItem()">add</button>
-
     <mat-tab-group mat-align-tabs="center" headerPosition="below" mat-stretch-tabs dynamicHeight>
 
       <mat-tab>
@@ -56,7 +54,14 @@
         </ng-template>
 
         <ng-template matTabContent>
-          Settings
+          <mat-form-field>
+            <mat-placeholder>Search reports</mat-placeholder>
+            <input matInput type="text" [(ngModel)]="newListItem">
+            <button mat-button matSuffix mat-stroked-button aria-label="Add item" (click)="addNewItem()">
+              <mat-icon>add</mat-icon>
+            </button>
+          </mat-form-field>
+
         </ng-template>
       </mat-tab>
 
