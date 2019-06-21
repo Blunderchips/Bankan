@@ -1,3 +1,24 @@
 /* .mat-card {
     margin: 2%;
 } */
+
+.books {
+    position: fixed;
+    transition: all 1s linear;
+    width: 90%;
+    height: calc(100% - 100px);
+}
+
+.mat-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.mat-card-header {
+    flex-shrink: 0;
+}
+
+.mat-card-content {
+    flex-grow: 1;
+    overflow: auto;
+}
