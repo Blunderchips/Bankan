@@ -28,7 +28,7 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": [],
             "es5BrowserSupport": true
@@ -138,5 +138,10 @@
       }
     }
   },
-  "defaultProject": "bankan"
+  "defaultProject": "bankan",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

@@ -135,7 +135,7 @@ export class NavComponent implements OnInit {
             if (isOpen) {
                 this.sidenav.close();
             }
-            this.router.navigate(['/home', bookUid]);
+            // this.router.navigate(['/home', bookUid]);
         });
     }
 }

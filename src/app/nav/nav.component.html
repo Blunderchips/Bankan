@@ -23,7 +23,7 @@
 
             <div *ngIf="isLoggedIn">
                 <a mat-list-item *ngFor="let book of whiteList | async" (click)="gotoBook(book.book)"
-                    routerLinkActive="active">
+                    routerLinkActive="active" [routerLink]="['/home', book.book]">
                     {{ getBookName(book.book) }}
                 </a>
             </div>
