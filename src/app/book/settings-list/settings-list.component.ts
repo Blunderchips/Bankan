@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 
 import { List } from '../models/list.model';
 import { Item } from '../models/item.model';
+import { Check } from '../models/check.model';
 
 @Component({
   selector: 'app-settings-list',
@@ -47,6 +48,14 @@ export class SettingsListComponent implements OnInit {
   delete(item: Item) {
     // TODO Confirmation dialogue
     if (true) {
+
+      const itemDBRef = this.afs.collection<Check>(item.uid);
+      itemDBRef.valueChanges({ idField: 'uid' }).subscribe(checks => {
+        checks.forEach(check => {
+          itemDBRef.doc(check.uid).delete();
+        });
+      });
+
       this.afs.collection<Item>(this.list.uid).doc(item.uid).delete();
     }
   }
