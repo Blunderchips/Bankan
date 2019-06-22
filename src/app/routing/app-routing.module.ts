@@ -25,7 +25,9 @@ export const ROUTES: Routes = [
 @NgModule({
   declarations: [],
   imports: [
-    RouterModule.forRoot(ROUTES, { useHash: false })
+    RouterModule.forRoot(ROUTES, {
+      useHash: true // For child routes, error 404 without
+    })
   ],
   exports: [RouterModule]
 })
