@@ -55,3 +55,12 @@ s {
   font-weight: bold;
   color: mat-color($accent, darker) !important;
 }
+
+.list-item {
+  cursor: pointer;
+}
+
+.list-item:hover {
+  font-weight: bold;
+  background: mat-color($accent, lighter) !important;
+}
