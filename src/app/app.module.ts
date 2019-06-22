@@ -4,6 +4,7 @@ import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { HttpClientModule } from '@angular/common/http'; // needed by Avatar Module 
+import { FormsModule } from '@angular/forms';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -20,7 +21,7 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './routing/home/home.component';
 import { SigninComponent } from './routing/signin/signin.component';
-import { PageNotFoundComponent } from './routing/page-not-found/page-not-found.component';
+import { Error404Component } from './routing/error-404/error-404.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { PageNotFoundComponent } from './routing/page-not-found/page-not-found.c
     HomeComponent,
     SigninComponent,
     NavComponent,
-    PageNotFoundComponent,
+    Error404Component,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +44,7 @@ import { PageNotFoundComponent } from './routing/page-not-found/page-not-found.c
     HttpClientModule,
     AvatarModule,
     BookModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

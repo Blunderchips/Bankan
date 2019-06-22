@@ -5,7 +5,7 @@ import { AuthProvider, Theme } from 'ngx-auth-firebaseui';
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
-  styleUrls: ['./signin.component.css']
+  styleUrls: ['./signin.component.scss']
 })
 export class SigninComponent implements OnInit {
 

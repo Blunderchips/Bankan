@@ -8,7 +8,7 @@ import { Item } from '../models/item.model';
 @Component({
   selector: 'app-check-log',
   templateUrl: './check-log.component.html',
-  styleUrls: ['./check-log.component.css']
+  styleUrls: ['./check-log.component.scss']
 })
 export class CheckLogComponent implements OnInit, AfterViewInit {
 

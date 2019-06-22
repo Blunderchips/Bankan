@@ -1,24 +1,24 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-import { PageNotFoundComponent } from './page-not-found.component';
+import { Error404Component } from './error-404.component';
 
-describe('PageNotFoundComponent', () => {
-  let component: PageNotFoundComponent;
-  let fixture: ComponentFixture<PageNotFoundComponent>;
+describe('Error404Component', () => {
+  let component: Error404Component;
+  let fixture: ComponentFixture<Error404Component>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       declarations: [
-        PageNotFoundComponent
+        Error404Component
       ]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PageNotFoundComponent);
+    fixture = TestBed.createComponent(Error404Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
