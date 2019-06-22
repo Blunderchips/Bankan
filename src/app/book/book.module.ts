@@ -13,6 +13,7 @@ import { BookComponent } from './book/book.component';
 import { ListComponent } from './list/list.component';
 import { BookMenuComponent } from './book-menu/book-menu.component';
 import { CheckLogComponent } from './check-log/check-log.component';
+import { SettingsListComponent } from './settings-list/settings-list.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CheckLogComponent } from './check-log/check-log.component';
     BookComponent,
     BookMenuComponent,
     CheckLogComponent,
+    SettingsListComponent,
   ],
   imports: [
     CommonModule,
