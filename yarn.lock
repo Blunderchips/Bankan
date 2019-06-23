@@ -109,10 +109,10 @@
   resolved "https://registry.yarnpkg.com/@angular-material-extensions/password-strength/-/password-strength-3.8.1.tgz#5f55454f23bf86e2738bad84ffd224b812da6aa7"
   integrity sha512-Elwa6RJTnhg+IealHTzC69ShjMW7M/uaymhua5+PTgMuympux42I+VlcdePlr5EmVwjXBxwMwoDPd9GF9V0wPw==
 
-"@angular/animations@^8.0.0":
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-8.0.1.tgz#805f08b0af9423d1c600f4c99586c097295d18f0"
-  integrity sha512-m4shu+wkVquFSKMmTA2Do+e8FhYnxcAiQdW1UtM9Ue1j4yKxUFgHNYauaG8pmzEzheeQqxGlA/cVcEi5XnRebw==
+"@angular/animations@^8.0.2":
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-8.0.2.tgz#40eead82eee787d8c39767de28d0fb3fd98e560d"
+  integrity sha512-6buaGp6sgyLWbjioGU0Wp/O9nFEQqD2L18uX5g5P5hdpq0bgopAbBee7AefJ8Kc/Kf79FlaKu9fKP5AEkeC8tA==
   dependencies:
     tslib "^1.9.0"
 
@@ -5500,6 +5500,13 @@ ngx-avatar@^3.6.0:
   dependencies:
     is-retina "^1.0.3"
     ts-md5 "^1.2.4"
+    tslib "^1.9.0"
+
+ngx-toastr@^10.0.4:
+  version "10.0.4"
+  resolved "https://registry.yarnpkg.com/ngx-toastr/-/ngx-toastr-10.0.4.tgz#cbc61b8d67d748194ea7a28542b01e39bf1fc6c2"
+  integrity sha512-iN+zr2Msae5wV334c1dytRhSYNdUz467jwv1NE91lMmllsMkpUzZlu8VdFCeTFt+/R4TWzz19xBRqhpp+OAuVA==
+  dependencies:
     tslib "^1.9.0"
 
 nice-try@^1.0.4:
