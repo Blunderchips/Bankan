@@ -27,7 +27,7 @@ export class BookComponent implements OnInit {
 
     this.route.params.subscribe(params => {
       const bookUid = params.bookUid;
-      console.log(bookUid);
+      // console.log(bookUid);
       if (bookUid) {
         this.uid = bookUid;
 

@@ -40,6 +40,7 @@ import { Error404Component } from './routing/error-404/error-404.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // firestore
     AngularFireAuthModule, // auth
+    AngularFirestoreModule.enablePersistence(), // enable offline caching
     NgxAuthFirebaseUIModule.forRoot(environment.firebase),
     HttpClientModule,
     AvatarModule,

@@ -1,0 +1,37 @@
+<mat-list>
+  <mat-list-item *ngFor="let item of items | async; let i = index;">
+
+    <ng-container *ngIf="isEditing(item); else elseTemplate">
+
+      <form>
+        <mat-form-field>
+          <input matInput placeholder="Edit item" [(ngModel)]="edit[item.uid]" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+      </form>
+
+      <span class="spacer"></span>
+
+      <button mat-icon-button>
+        <mat-icon (click)=save(item)>save</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon (click)=toggleEdit(item)>close</mat-icon>
+      </button>
+    </ng-container>
+    <ng-template #elseTemplate>
+      <mat-icon class="drag_indicator">drag_indicator</mat-icon>&nbsp;
+      {{ item.item }}
+
+      <span class="spacer"></span>
+
+      <button mat-icon-button>
+        <mat-icon (click)=toggleEdit(item)>edit</mat-icon>
+      </button>
+      <button (click)=delete(item) mat-icon-button color="warn">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </ng-template>
+
+  </mat-list-item>
+
+</mat-list>

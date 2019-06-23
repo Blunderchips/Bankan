@@ -57,4 +57,11 @@ export class ListComponent implements OnInit {
   getUid(): string {
     return this.list.uid;
   }
+
+  /**
+   * @returns active list
+   */
+  getList(): List {
+    return this.list;
+  }
 }

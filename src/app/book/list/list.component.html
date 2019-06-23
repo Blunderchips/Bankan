@@ -36,7 +36,7 @@
         </ng-template>
       </mat-tab>
 
-      <mat-tab>
+      <!-- <mat-tab>
         <ng-template mat-tab-label>
           <mat-icon>history</mat-icon>
         </ng-template>
@@ -46,7 +46,7 @@
           <app-check-log [listUid]=getUid()></app-check-log>
 
         </ng-template>
-      </mat-tab>
+      </mat-tab> -->
 
       <mat-tab>
         <ng-template mat-tab-label>
@@ -54,8 +54,13 @@
         </ng-template>
 
         <ng-template matTabContent>
+
+          <app-settings-list [list]=getList()></app-settings-list>
+
+          <br>
+
           <mat-form-field>
-            <mat-placeholder>Search reports</mat-placeholder>
+            <mat-placeholder>Add new Item...</mat-placeholder>
             <input matInput type="text" [(ngModel)]="newListItem">
             <button mat-button matSuffix mat-stroked-button aria-label="Add item" (click)="addNewItem()">
               <mat-icon>add</mat-icon>
