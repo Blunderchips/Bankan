@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
 import { ToastrService } from 'ngx-toastr';
+import { CookieService } from 'ngx-cookie-service';
 
 import { BK_TOAST_MESSAFE_CONFIG } from 'src/app/Bankan';
 
@@ -17,21 +17,19 @@ export class ListComponent implements OnInit {
 
   @Input() list: List;
 
-  private items: Observable<Item[]>;
-
   //
   newListItem: string;
   //
 
   constructor(
     private afs: AngularFirestore,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private cookie: CookieService,
   ) {
     this.newListItem = '';
   }
 
   ngOnInit() {
-    this.items = this.afs.collection<Item>(this.list.uid).valueChanges();
   }
 
   addNewItem(): void {
@@ -42,10 +40,14 @@ export class ListComponent implements OnInit {
 
     const uid = this.afs.createId();
 
-    this.afs.collection<Item>(this.list.uid).doc(uid).set({
+    if (!this.list.items) {
+      this.list.items = [];
+    }
+    this.list.items.push({
       item,
       uid
     });
+    this.afs.collection(this.list.parent).doc(this.list.uid).update(this.list);
 
     this.newListItem = ''; // clear input field once done
     this.toastr.success('Item added successfully', `${item} was added to the list`, BK_TOAST_MESSAFE_CONFIG);
@@ -63,5 +65,35 @@ export class ListComponent implements OnInit {
    */
   getList(): List {
     return this.list;
+  }
+
+  getItems(): Item[] {
+    return this.list.items;
+  }
+
+  isExpansionPanelOpen(): boolean {
+    const state = this.cookie.get(`${this.list.uid}_isOpen`);
+    if (!state || state !== 'true') {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  setExpansionPanelState(isOpen: boolean): void {
+    this.cookie.set(`${this.list.uid}_isOpen`, isOpen + '');
+  }
+
+  setSelectedTab($openTabIndex: number): void {
+    this.cookie.set(`${this.list.uid}_openTabIndex`, $openTabIndex + '');
+  }
+
+  getSelectedTab(): number {
+    const state = this.cookie.get(`${this.list.uid}_openTabIndex`);
+    if (!state) {
+      return 0;
+    } else {
+      return parseInt(state, 10);
+    }
   }
 }

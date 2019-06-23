@@ -1,4 +1,5 @@
-<mat-expansion-panel>
+<mat-expansion-panel [expanded]=isExpansionPanelOpen() (afterCollapse)=setExpansionPanelState(false)
+  (afterExpand)=setExpansionPanelState(true)>
 
   <mat-expansion-panel-header>
     <mat-panel-title> {{ list.name }} </mat-panel-title>
@@ -10,7 +11,8 @@
   <ng-template matExpansionPanelContent>
     <!-- <mat-divider></mat-divider> -->
 
-    <mat-tab-group mat-align-tabs="center" headerPosition="below" mat-stretch-tabs dynamicHeight>
+    <mat-tab-group mat-align-tabs="center" headerPosition="below" mat-stretch-tabs dynamicHeight
+      (selectedIndexChange)="setSelectedTab($event)" [selectedIndex]="getSelectedTab()">
 
       <mat-tab>
         <ng-template mat-tab-label>
@@ -20,7 +22,8 @@
         <!-- <ng-template matTabContent> -->
         <mat-list #list>
 
-          <app-item *ngFor="let i of items | async" [item]=i></app-item>
+          <app-item *ngFor=" let i of getItems()" [item]=i>
+          </app-item>
 
         </mat-list>
         <!-- </ng-template> -->
@@ -53,21 +56,21 @@
           <mat-icon>settings</mat-icon>
         </ng-template>
 
-        <ng-template matTabContent>
+        <!-- <ng-template matTabContent> -->
 
-          <app-settings-list [list]=getList()></app-settings-list>
+        <mat-form-field>
+          <mat-placeholder>Add new Item...</mat-placeholder>
+          <input matInput type="text" [(ngModel)]="newListItem">
+          <button mat-button matSuffix mat-stroked-button aria-label="Add item" (click)="addNewItem()">
+            <mat-icon>add</mat-icon>
+          </button>
+        </mat-form-field>
 
-          <br>
+        <br>
 
-          <mat-form-field>
-            <mat-placeholder>Add new Item...</mat-placeholder>
-            <input matInput type="text" [(ngModel)]="newListItem">
-            <button mat-button matSuffix mat-stroked-button aria-label="Add item" (click)="addNewItem()">
-              <mat-icon>add</mat-icon>
-            </button>
-          </mat-form-field>
+        <app-settings-list [list]=getList()></app-settings-list>
 
-        </ng-template>
+        <!-- </ng-template> -->
       </mat-tab>
 
     </mat-tab-group>

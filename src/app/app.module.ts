@@ -10,10 +10,10 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
+import { CookieService } from 'ngx-cookie-service';
+import { AvatarModule } from 'ngx-avatar';
 
 import { environment } from 'src/environments/environment.prod';
-
-import { AvatarModule } from 'ngx-avatar';
 import { AppRoutingModule } from './routing/app-routing.module';
 import { BookModule } from './book/book.module';
 
@@ -47,7 +47,7 @@ import { Error404Component } from './routing/error-404/error-404.component';
     BookModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

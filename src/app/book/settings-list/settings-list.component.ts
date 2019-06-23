@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
 
 import { List } from '../models/list.model';
 import { Item } from '../models/item.model';
@@ -18,12 +17,9 @@ export class SettingsListComponent implements OnInit {
   edit = {};
   editing = {};
 
-  items: Observable<Item[]>;
-
   constructor(private afs: AngularFirestore) { }
 
   ngOnInit() {
-    this.items = this.afs.collection<Item>(this.list.uid).valueChanges();
   }
 
   toggleEdit(item: Item) {
@@ -39,10 +35,14 @@ export class SettingsListComponent implements OnInit {
       return;
     }
 
+    const i = this.list.items.indexOf(item);
     item.item = input.trim();
-    this.afs.collection<Item>(this.list.uid).doc(item.uid).update(item);
+    this.list.items[i] = item;
 
-    this.toggleEdit(item);
+    this.update();
+
+    // // panel gets destroyed when updating so there is no need to exit mode.
+    // this.toggleEdit(item);
   }
 
   delete(item: Item) {
@@ -56,11 +56,23 @@ export class SettingsListComponent implements OnInit {
         });
       });
 
-      this.afs.collection<Item>(this.list.uid).doc(item.uid).delete();
+      const index = this.list.items.indexOf(item);
+      if (index > -1) {
+        this.list.items.splice(index, 1);
+      }
+      this.update();
     }
   }
 
   isEditing(item: Item): boolean {
     return this.editing[item.uid];
+  }
+
+  getItems(): Item[] {
+    return this.list.items;
+  }
+
+  update() {
+    this.afs.collection(this.list.parent).doc(this.list.uid).update(this.list);
   }
 }

@@ -14,6 +14,7 @@ import { ListComponent } from './list/list.component';
 import { BookMenuComponent } from './book-menu/book-menu.component';
 import { CheckLogComponent } from './check-log/check-log.component';
 import { SettingsListComponent } from './settings-list/settings-list.component';
+import { SortableDirective } from './sortable.directive';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { SettingsListComponent } from './settings-list/settings-list.component';
     BookMenuComponent,
     CheckLogComponent,
     SettingsListComponent,
+    SortableDirective,
   ],
   imports: [
     CommonModule,

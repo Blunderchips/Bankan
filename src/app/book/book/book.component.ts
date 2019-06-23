@@ -57,7 +57,8 @@ export class BookComponent implements OnInit {
       {
         uid,
         name,
-        description: uid
+        description: uid,
+        parent: this.uid
       }
     );
   }
